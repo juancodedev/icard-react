@@ -31,7 +31,7 @@ export function TableDetailsAdmin() {
       const response = await getPaymentByTable(id);
       if (size(response) > 0) setPaymentData(response[0]);
     })();
-  }, [reloadOrders]);
+  }, [getPaymentByTable, id, reloadOrders]);
 
   const onReloadOrders = () => setReloadOrders((prev) => !prev);
   const openCloseModal = () => setShowModal((prev) => !prev);

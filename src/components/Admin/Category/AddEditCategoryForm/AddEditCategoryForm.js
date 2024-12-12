@@ -32,7 +32,7 @@ export function AddEditCategoryForm(props) {
     const file = acceptedFile[0];
     await formik.setFieldValue("image", file);
     setPreviewImage(URL.createObjectURL(file));
-  }, []);
+  }, [formik]);
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: "image/jpeg, image/png",

@@ -14,7 +14,7 @@ export function PaymentProductList(props) {
       const response = await getOrdersByPayment(payment.id);
       setOrders(response);
     })();
-  }, []);
+  }, [getOrdersByPayment, payment.id]);
 
   return (
     <div className="payment-product-list">

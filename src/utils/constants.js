@@ -1,7 +1,7 @@
 // export const BASE_API = "https://icard-django.herokuapp.com";
 
-export const BASE_API = 'https://icard-django-loubvg-ancient-river-7412.fly.dev'
-// export const BASE_API = 'http://127.0.0.1:8000' 
+// export const BASE_API = 'https://icard-django-loubvg-ancient-river-7412.fly.dev'
+export const BASE_API = 'http://127.0.0.1:8000'
 // //# process.env.BASE_API_URL;
 export const TOKEN = "token";
 
