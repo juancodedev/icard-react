@@ -16,7 +16,7 @@ export function AddEditProductForm(props) {
   const { categories, getCategories } = useCategory();
   const { addProduct, updateProduct } = useProduct();
 
-  useEffect(() => getCategories(), []);
+  useEffect(() => getCategories(), [getCategories]);
   useEffect(() => {
     setCategoriesFormat(formatDropdownData(categories));
   }, [categories]);
@@ -38,7 +38,7 @@ export function AddEditProductForm(props) {
     const file = acceptedFile[0];
     await formik.setFieldValue("image", file);
     setPreviewImage(URL.createObjectURL(file));
-  }, []);
+  }, [formik]);
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: "image/jpeg, image/png",
